@@ -147,6 +147,13 @@ body {
     border-right: 1px solid gray;
     padding: 5px;
 }
+.google:before{
+    font-family: FontAwesome;
+    content: "\f0d5";
+    margin-right: 20px;
+    border-right: 1px solid gray;
+    padding: 5px;
+}
 .btn {
     width: 48%;
     padding: 5% 0;
