@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+}
+.bg_light_gray{
+    background: #faf7f7;
+}
+.bg_dark_gray{
+    background: #e3e3e3;
+}
+table, th, td {
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    }
+.horizontal_table{
+    width: 100vw;
+    height: 100vh;
+    border:32px solid #3a4965;
+}    
+th, td{
+    box-shadow: 5px 0px 5px -7px black inset;
+}
+td{
+    color: #555454;
+}
+.pricing_plan_header {
+    font-size: 24px;
+    font-weight: bold;
+    }
+    
+ .choose {
+    font-size: 18px;
+    }
+    
+ .plan {
+    font-size: 30px; }
+
+.btn{
+        font-size:19px;
+        color: white;
+        font-weight: bold;
+        padding: 12px 48px;
+        text-transform: uppercase;
+        border-width: 0 0 7px 0;
+        border-style: solid;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+.btn-black{
+       background-color: #484848;
+       border-color: #404040;
+    }
+ .btn-green {
+        background-color: #89c331;
+        border-color: #6da11e;
+    }
+ .btn-red {
+    background-color: #f04a56;
+    border-color: #df3a46;
+ }
+            
+.btn-blue {
+    background-color: #16736f;
+    border-color: #105c58;
+ }
+ 
+.dollar {
+    display: inline-block;
+    font-size: 60px;
+    padding-top: 5px;
+    }
+  
+.details {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding-top: 5px;
+}      
+
+.title{
+color: white;
+padding: 15px 20px;
+}
+.bg-green{
+    background: #89c331;
+}
+.bg-red{
+    background:#f04a56 ;
+}
+.bg-blue{
+    background: #16736f;
+}
+    
