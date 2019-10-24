@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.animation_wars {
+    perspective: 400px;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+  }
+.container {
+    font-family: sans-serif;
+    transform-origin: center;
+    color: yellow;
+    font-size:70px;
+    line-height: 1.6;
+    font-weight: bold;
+    animation: slide_up 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+h1 {
+    text-align: center;
+    font-size: 90px;
+}
+p{
+    margin-top: 80px;
+}
+  @keyframes slide_up {
+    from {
+      transform: rotateX(40deg) translateY(50%);
+    }
+    to {
+      transform: rotateX(40deg) translateY(-100%);
+    }
+  }
+  
