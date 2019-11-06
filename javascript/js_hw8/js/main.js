@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("focusin", ()=>{
         input.style.border = "2px solid green";
         input.value = "";
+        phrase.remove();
     });
 
     input.addEventListener("focusout", ()=>{
