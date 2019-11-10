@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.header{
+    padding: 30px 80px;
+}
+.logo{
+    max-width: 100%;
+    height: 40px;
+    padding:20px 60px 60px;
+  
+}
+.logo_a{
+    font-size: 2rem;
+    color:black;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+}
+.menu{
+    max-width: 100vw;
+    height: 60px;
+    background: #136e52;
+    text-align: center;
+   
+}
+.light{
+    background: rgb(75, 212, 132) !important;
+    color:white !important;
+}
+.theme-button{
+    text-align: center;
+}
+.theme-button button{
+    margin-top: 10px;
+    border: 0;
+    cursor: pointer;
+    padding: 20px;
+}
+.menu_li{
+    width: 200px;
+    height: 60px;
+    padding-top: 20px;
+}
+.menu_li, footer li{
+    display: inline-block;
+    margin-left: 55px;
+    
+}
+.menu_links{
+    color:white;
+}
+.menu_li:hover{
+    background: #0b4f3a;
+    border-left: 1px solid rgb(138, 62, 8);
+    border-right:1px solid rgb(138, 62, 8) ;
+    transition: .2s;
+}
+a{
+    text-decoration: none;
+}
+.img{
+    width:800px;
+    height:350px;
+    float: right;
+    border: 1px solid #9da6a2;
+    text-align: center;
+    margin:20px 0 15px;
+    
+    
+}
+.img:hover img{
+    transform: scale(1.1);
+    transition: .2s;
+
+}
+.content{
+    margin: 20px;
+}
+.side_menu{
+    float: left;
+    list-style-type: none;
+    width: 20%;
+    margin: 20px 35px;
+    border: 2px solid #9da6a2;
+    
+}
+.side_menu_li{
+    padding:15px 15px ;
+    height: 50px;
+    
+}
+.clear{
+    clear:both;
+}
+
+.side_menu_li:hover{
+    background: #e1e6e4;
+}
+.side_menu_li:hover .side_menu_links{
+    color:black;
+    margin-left: 15px;
+    transition: .2s;
+}
+.side_menu a{
+    color:#9da6a2;
+    font-weight: bold;
+}
+.txt{
+    float: right;
+    height: 200px;
+    width:800px;
+}
+.txt p{
+    margin-bottom: 10px;
+}
+.section1{
+    max-width: 100vw;
+    min-height: 88vh;
+
+}
+.footer-span{
+    float: right;
+}
+footer .footer_menu{
+    float: left;
+}
+.footer-link, .footer-span{
+    color: black;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    text-decoration:none;
+}
+footer{
+    width: 98.6vw;
+    padding: 15px;
+    min-height: 50px;
+    background: #696e6c;
+}
+.footer-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 2px solid rgb(0, 174, 255);
+    /* margin: 0 auto; */
+    transition:all 1s linear 0s;
+    
+}
+.footer-link:hover{
+   color:  rgb(0, 174, 255)
+}
+ .footer-link:hover::after {
+    width: 90%;
+  }
