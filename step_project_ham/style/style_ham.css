@@ -30,9 +30,7 @@ header a {
     color: rgba(255, 255, 255, 255);
 }
 
-.menu_item:hover .menu_item_link{
-    color: #18cfab;
-}
+
 
 .top_navigation {
     color: #ccc;
@@ -122,11 +120,23 @@ header a {
     list-style-type: none;
     padding: 44px 0;
     box-sizing: content-box;
-}
-.menu_item:hover {
-    border-bottom: 2px solid #18cfab;
+    position: relative;
 }
 
+.menu_item::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    border-bottom: 2px solid #18cfab;
+    top : 100px
+}
+.menu_item:hover .menu_item_link{
+    color: #18cfab;
+}
+.menu_item:hover::after {
+    width: 100%;
+  }
 .searchbox {
     cursor: pointer;
 }
