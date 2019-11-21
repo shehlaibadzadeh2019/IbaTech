@@ -225,135 +225,60 @@ $(document).ready( function imgfilter() {
         }
     });
 });
+// Breaking news
+
+// $(".post").mouseover(()=>{
+//     $(".caption_title").html("Amazing Image Post")
+// })
+// $(".post").mouseout(()=>{
+//     $(".caption_title").html("Amazing Blog Post")
+// })
+let post = document.querySelectorAll(".post");
+let caption = document.querySelectorAll(".caption_title");
+console.log(caption);
+for (let i = 0; i< post.length; i++) {
+    post[i].addEventListener("mouseover", ()=>{
+        caption[i].innerHTML = "Amazing Image Post";
+    })
+    post[i].addEventListener("mouseout", ()=>{
+        caption[i].innerHTML = "Amazing Blog Post";
+    })
+}
 
 // FEEDBACKS //
 
+const $container = $('.swiper-container');
+const $employee = $('.employee');
+const $carousel = $container.find('.carousel');
+const $slider = $carousel.find('.slider');
 
+new Swiper('.swiper-container',{
+    loop: true,
+        navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+        })
 
+let i=1;
+$(".next").on("click", ()=>{
+    if(i > 0  && i < 4){
+        i++;
+    }
+   else if(i==4){
+       i=1;
+   }
+    $slider.find('.active').removeClass('active');
+    $(".img"+i).addClass('active');
+})
 
-
-
-(() => {
-        function Client(name, position, picture, cite) {
-            this.name = name;
-            this.position = position;
-            this.picture = picture;
-            this.cite = cite;
-        };
-
-        let client01 = new Client(
-            'Mary Stark',
-            'CEO',
-            'images/person.jpg',
-            'Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Morbi pulvinar odio eget aliquam facilisis. non dictum odio nisi quis massa.'
-        );
-        let client02 = new Client(
-            'Caroline Dofort',
-            'Manager',
-            'images/person1.jpg',
-            'dig. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. '
-        );
-        let client03 = new Client(
-            'Mary Black',
-            'Producing Accounter',
-            'images/person2.jpg',
-            'Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. '
-        );
-        let client04 = new Client(
-            'John Bolt',
-            'UX Designer',
-            'images/person3.jpg',
-            'Integer dignissim, augue tempus ucies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Tempus ultricies luctus, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. '
-        );
-      
-        let clients = [client01, client02, client03, client04];
-
-
-        let $facesCarousel = $('.faces-carousel');
-
-        for (let i = 0; i < clients.length; i++) {
-            let $face = $(`<div class="face" data-index="${i}" style="background-image: url(${clients[i].picture});"></div>`);
-
-            if (i === 2) {
-                $face.addClass('selected')
-            };
-            if (i < 1 || i > clients.length) {
-                $face.addClass('hidden')
-              }  ;
-            $facesCarousel.append($face);
-
-        }
-        ;
-
-        displayFeedback();
-
-        function displayFeedback() {
-
-            let i = +$('.faces-carousel > .selected').attr('data-index');
-
-            $('.saying-cite p').text(clients[i].cite);
-            $('.saying-name p:nth-child(1)').text(clients[i].name);
-            $('.saying-name p:nth-child(2)').text(clients[i].position);
-            $('.saying-pic-face').css({backgroundImage: `url(${clients[i].picture})`});
-        };
-
-
-        $('.face').on('click', moveFaceUp);
-
-        function moveFaceUp() {
-
-            $('.faces-carousel > .selected').removeClass('selected')
-            $(this).addClass('selected');
-
-            displayFeedback();
-        };
-
-
-        $('.right-btn').on('click', function () {
-            $('.face').off('click', moveFaceUp);
-
-            let $selected = $('.faces-carousel > .selected');
-            $selected.removeClass('selected');
-            $selected.next().addClass('selected');
-            displayFeedback();
-
-            if ($($('.face')[$('.face').length - 1]).hasClass('selected')) {
-                $($('.face')[0]).addClass('hidden');
-                $($('.face')[$('.face').length - 1]).removeClass('hidden');
-
-                $facesCarousel.append($($('.face')[0]).clone(true));
-                $('.face')[0].remove();
-
-            }
-            ;
-            $('.face').on('click', moveFaceUp);
-        });
-
-
-        $('.left-btn').on('click', function () {
-            $('.face').off('click', moveFaceUp);
-
-            let $selected = $('.faces-carousel > .selected');
-            $selected.removeClass('selected');
-            $selected.prev().addClass('selected');
-            displayFeedback();
-
-            if ($($('.face')[0]).hasClass('selected')) {
-                $($('.face')[$('.face').length - 1]).addClass('hidden');
-                $($('.face')[0]).removeClass('hidden');
-
-                let lastFace = $('.face')[$('.face').length - 1];
-                $($('.face')[0]).removeClass('hidden');
-                ($('.face')[0]).before(lastFace.cloneNode(true));
-                lastFace.remove();
-            }
-            ;
-            $('.face').on('click', moveFaceUp);
-        });
-
-    })();
-
-
-
-
-
+$(".prev").on("click", ()=>{
+    if(i > 1  && i < 5){
+        i--;
+    }
+    else if(i==1){
+        i=4;
+    }
+    $slider.find('.active').removeClass('active');
+    $(".img"+i).addClass('active');
+})
