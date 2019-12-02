@@ -1,0 +1,296 @@
+@import "libs/bootstrap.min.css"
+
+
+$primary: #8d81ac
+$Hfont: 'Montserrat', sans-serif
+
+body
+    padding: 0
+    margin: 0
+    font-family: 'Lato', sans-serif
+
+h1, h2, h3, h4, h5
+    font-family: 'Montserrat', sans-serif
+
+@import "header.sass"
+.rounded
+    border-radius: 40px !important
+
+.landing-page-container
+    height: 650px
+    width: 100%
+    background-size: cover
+    display: flex
+    justify-content: center
+    padding: 61px
+    .text-block
+        text-align: center
+        color: white
+    .landing-page-h1
+        font-weight: 900
+        font-size: 82px   
+    .landing-page-h2
+        font-size: 30px
+        font-family: 'Lato', sans-serif
+        color: #8d81ac
+    .landing-page-h3
+        font-size: 18px
+        font-family: 'Montserrat', sans-serif
+        color: #848e97
+
+.revolutionary-container
+    padding: 10px
+    text-align: center
+    .download
+        text-align: center
+        font-family: 'Montserrat', sans-serif
+    .download-btn
+        padding: 15px
+        width: 390px
+        background: #8d81ac
+        font-size: 21px
+        color: white
+        font-weight: bold
+        margin-bottom: 20px
+        margin-top: -40px
+    .download-txt
+        font-size: 14px
+        color: #848e97
+    .container
+        padding-top: 60px
+        padding-bottom: 70px
+    .text-box
+        text-align: center
+        padding-bottom: 25px
+    .text-box-h2
+        color: #635c73
+        font-size: 54px
+        text-transform: uppercase
+        font-weight: 900
+        text-align: center
+    .text-box p
+        color: #323232
+        font-family: 'Lato', sans-serif
+        font-size: 20px
+        padding: 15px
+    .social-placeholder-item
+        display: flex
+        padding: 0 !important
+        border: 1px solid #d5d5d5
+        border-radius: 5px
+        margin-left: 5px
+    .item-left, .item-right
+        font-size: 16px
+        font-weight: bold
+        padding: 3px 18px
+        font-family: 'Lato', sans-serif
+    .item-left
+        background: #e4e1e1
+        border-right: 1px solid #d5d5d5
+    .far
+        font-size: 16px
+
+.what-you-get-container
+    padding: 70px 0 50px 90px
+    display: flex
+    background: #e9e7e7
+    .visual-list-item
+        display: flex
+    .here-is-what
+        display: none
+    .img-holder
+       padding: 27px
+       text-align: center
+    .content-2-header
+        font-size: 48px
+        color: #8d81ac
+        font-weight: 900
+        font-family: 'Montserrat', sans-serif
+        padding-left: 25px
+    .text-holder 
+        h3
+            font-size: 16px
+            color: #323232
+        p 
+           color: #848e97
+           font-size: 14px 
+    .what-you-get-content-2
+        padding-left: 80px
+.talking-fork-container
+    padding-left: 91px 
+    padding-right: 91px
+    padding-bottom: 45px
+    background-position: center
+    background-size: cover
+.talking-fork-heading
+    padding-top: 93px
+    padding-bottom: 85px
+    text-align: center
+.talking-fork-header
+    font-size: 48px
+    color: white
+    font-weight: 900
+    font-family: 'Montserrat', sans-serif
+    text-transform: capitalize
+.people-talking-fork 
+    .top
+        padding-bottom: 100px
+    .talking-fork-text
+        font-size: 16px
+        font-family: 'Lato', sans-serif
+        font-style: italic
+        padding-top: 38px
+        color: white
+    .talking-fork-item
+        text-align: center
+.bottom-text
+    p
+        font-size: 14px
+        font-family: 'Lato', sans-serif
+        color: #a291a5
+        text-align: center
+        padding-left: 170px
+        padding-right: 145px
+        padding-top: 45px
+        &::after
+            content: ''
+            display: block
+            border-bottom: 1px solid #a291a5
+            width: 90%
+            padding-top: 15px 
+            margin-left: 50px
+
+
+@media (max-width: 1200px) and (min-width: 993px)
+    .what-you-get-container
+        padding: 50px 0 50px 90px
+        .text-holder
+            width: 270px
+        .content-2-img img
+            width: 610px
+    .bottom-text
+        p
+            padding-left: 70px
+            padding-right: 70px
+
+
+
+@media (max-width: 992px) and (min-width: 481px)
+    .landing-page-container
+        background-position: center
+        .landing-page-h2
+            font-size: 24px
+    .revolutionary-container
+        .text-box-h2
+            font-size: 42px
+        .social-placeholder-item span, .fas
+            font-size: 14px
+    .content-2-header
+        display: none
+    .here-is-what
+        display: block !important
+        font-size: 42px
+        color: #8d81ac
+        font-weight: 900
+        text-align: center
+        font-family: 'Montserrat', sans-serif
+        padding-bottom: 55px
+    .what-you-get-container
+        flex-direction: column
+        padding-left: 20px 
+        padding-right: 20px
+        .content-2-img img
+            width: 730px
+            height: 470px
+        .what-you-get-content-2
+            padding-left: 20px
+        .visual-list
+            margin-bottom: 67px
+    .talking-fork-container
+        padding-left: 20px 
+        padding-right: 20px
+        .talking-fork-header
+            font-size: 42px
+        .talking-fork-item
+            text-align: center
+        .top
+            padding-bottom: 50px
+        .bottom-text
+            p
+                padding-left: 48px
+                padding-right: 0
+
+                
+
+@media (max-width: 480px) and (min-width: 320px)
+    .landing-page-container
+        padding: 35px
+        background-position: bottom center
+        height: 600px
+        .landing-page-h1
+            font-size: 41px
+        .landing-page-h2 
+            font-size: 18px
+            text-transform: capitalize
+        .landing-page-h3
+            font-size: 14px
+            text-transform: uppercase
+    .revolutionary-container 
+        .download-btn
+            width: 290px
+            font-size: 18px
+        .text-box-h2
+            font-size: 26px
+        .text-box p
+            font-size: 14px
+        .item-left, .item-right
+            padding: 6px 
+            font-size: 14px
+    .content-2-header
+        display: none
+    .here-is-what
+        display: block !important
+        font-size: 32px
+        color: #8d81ac
+        font-weight: 900
+        text-align: center
+        font-family: 'Montserrat', sans-serif
+        padding-bottom: 35px
+    .what-you-get-container
+        flex-direction: column
+        padding-left: 15px 
+        padding-right: 15px
+        padding-bottom: 25px
+        .content-2-img img
+            width: 730px
+            height: 470px
+        .what-you-get-content-2
+            padding-left: 20px
+        .visual-list
+            margin-bottom: 67px
+        .visual-list-item
+            flex-direction: column
+        .text-holder p, .text-holder h3
+            text-align: center
+        .content-2-img img
+            width: 300px
+            height: 343px
+        .what-you-get-content-2
+            padding: 0
+    .talking-fork-container
+        padding-left: 15px 
+        padding-right: 15px
+        .talking-fork-header
+            font-size: 36px
+        .talking-fork-item
+            padding-left: 30px
+            text-align: center
+            padding-bottom: 30px
+        .bottom-text
+            p
+                padding-left: 23px
+                padding-right: 0
+                &::after
+                    margin-left: 0
+                    width: 100%
+                    
